@@ -1,16 +1,17 @@
- Restaurant Reservation System
+RESTAURANT RESERVATION SYSTEM
 
  A full-stack web application that enables users to discover restaurants, check table availability, and make reservations through a centralized reservation platform.
 
-Overview
+
+OVERVIEW
 
 The Restaurant Reservation System is a full-stack web application developed to simplify the process of discovering restaurants, checking seating availability, and making table reservations.
 
-The system integrates a modern web interface with backend services and database functionality to provide a complete reservation workflow.
+The system combines a modern web interface with backend services and database functionality to support a complete restaurant reservation workflow.
 
 The application follows a structured workflow:
 
-
+```text
 Restaurant Discovery
         ↓
 Restaurant Information
@@ -22,58 +23,104 @@ Table Selection
 Reservation
         ↓
 Database Persistence
-The project demonstrates the practical application of frontend development, backend integration, database management, and collaborative software development to build a complete web-based reservation system.
 
-Key Features
-Restaurant Discovery
+The project demonstrates the practical application of frontend development, backend integration, database management, and collaborative software development in building a complete web-based reservation system.
 
-Users can browse and explore restaurants through a centralized web interface and access relevant restaurant information before making a reservation.
+KEY FEATURES
 
-Availability Checking
+1. Restaurant Discovery
 
-The application allows users to check restaurant seating availability before proceeding with a reservation.
+The application provides a centralized interface for users to browse and explore available restaurants.
 
-Table Reservation
+Users can access restaurant information before proceeding with the reservation workflow.
 
-Users can select available seating and complete the reservation workflow through the application.
+2. Restaurant Information
 
-Full-Stack Integration
+The system provides restaurant-related information required by users during the discovery and selection process.
 
-The application connects the frontend interface with backend services and database functionality to support the complete reservation process.
+The interface is designed to provide a structured experience for exploring restaurants before making a reservation.
 
-Database Integration
+3. Table Availability
 
-Supabase and PostgreSQL are used to provide persistent data storage and support restaurant and reservation-related operations.
+Users can check restaurant seating availability before proceeding with a reservation.
 
-Responsive Web Interface
+The availability workflow connects the frontend interface with the application's backend and database services.
 
-The application provides a structured and user-friendly web interface for restaurant discovery, availability checking, and reservation management.
+4. Table Reservation
 
-System Architecture
-                         ┌──────────────────────┐
-                         │        User          │
-                         │ Restaurant Discovery │
-                         │   & Reservation      │
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │      Frontend        │
-                         │  React / JavaScript   │
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │   Backend Services   │
-                         │  Application Logic   │
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │      Supabase        │
-                         │ PostgreSQL Database  │
-                         └──────────────────────┘
-Reservation Workflow
+The core functionality of the system is the restaurant reservation workflow.
+
+Users can:
+
+Select Restaurant
+        ↓
+Check Availability
+        ↓
+Select Available Seating
+        ↓
+Enter Reservation Details
+        ↓
+Confirm Reservation
+
+Reservation information is processed through the application's backend and database layer.
+
+5. Full-Stack Integration
+
+The application integrates multiple layers of a full-stack system:
+
+User Interface
+      ↓
+Frontend Application
+      ↓
+Backend Services
+      ↓
+Database
+
+The frontend provides the user-facing interface, while backend services and database functionality support the application's reservation workflow.
+
+6. Database Integration
+
+The application uses Supabase and PostgreSQL for persistent data management.
+
+Database resources and configuration are maintained within the supabase/ directory of the project.
+
+7. Responsive User Interface
+
+The frontend provides a structured interface for restaurant discovery, availability checking, and reservation-related interactions.
+
+The project emphasizes a clear and accessible user experience throughout the reservation workflow.
+
+SYSTEM ARCHITECTURE
+
+The application follows a full-stack architecture connecting the frontend interface with backend services and database functionality.
+
+                    ┌─────────────────────┐
+                    │        User         │
+                    │ Restaurant Discovery│
+                    │   & Reservation     │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │      Frontend       │
+                    │ React / JavaScript  │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ Backend Services    │
+                    │ Application Logic   │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │      Supabase       │
+                    │    PostgreSQL       │
+                    └─────────────────────┘
+RESERVATION WORKFLOW
+
+The primary reservation workflow can be represented as:
+
 Browse Restaurants
         ↓
 Select Restaurant
@@ -92,7 +139,8 @@ Store Reservation
         ↓
 Reservation Completed
 
-Technology Stack
+TECHNOLOGY STACK
+
 Component	Technology
 Frontend	React, JavaScript, HTML, CSS
 Backend Services	Supabase
@@ -102,25 +150,45 @@ Package Management	npm
 Version Control	Git
 Repository Hosting	GitHub
 
-Project Structure
+PROJECT STRUCTURE
+
 Restaurant-Reservation-System/
 │
-├── Documents/              # Project documentation
-├── public/                 # Public assets
-├── src/                    # Application source code
-├── supabase/               # Supabase and database resources
+├── Documents/
+│   └── Project documentation
 │
-├── .gitignore              # Git configuration
-├── README.md               # Project documentation
-├── index.html              # Application entry point
-├── package.json            # Project dependencies and scripts
-├── package-lock.json       # Dependency lock file
-├── eslint.config.js        # ESLint configuration
-├── postcss.config.js       # PostCSS configuration
-├── netlify.toml            # Deployment configuration
+├── public/
+│   └── Public assets
+│
+├── src/
+│   └── Application source code
+│
+├── supabase/
+│   └── Supabase and database resources
+│
+├── .gitignore
+├── README.md
+├── index.html
+├── package.json
+├── package-lock.json
+├── eslint.config.js
+├── postcss.config.js
+├── netlify.toml
 └── ...
 
-Configure Environment Variables
+Installation
+1. Clone the Repository
+git clone https://github.com/swethaburra2005-commits/Restaurant-Reservation-System.git
+
+Navigate to the project directory:
+
+cd Restaurant-Reservation-System
+2. Install Dependencies
+
+Install the required project dependencies using npm:
+
+npm install
+3. Configure Environment Variables
 
 If the application requires Supabase or other environment-specific configuration, create the required local environment variables before running the application.
 
@@ -134,19 +202,23 @@ npm run dev
 
 The application will be available through the local development URL provided by the development server.
 
-Database
+DATABASE
 
 The application uses Supabase with PostgreSQL for persistent data management.
 
-The database layer supports the core restaurant and reservation workflows and provides structured storage for application data.
+The database layer supports the application's restaurant and reservation workflows.
 
-Database-related resources are maintained within the supabase/ directory.
+Database-related resources are maintained within:
 
-Development Workflow
+supabase/
 
-The project was developed as a collaborative full-stack application. Development involved frontend implementation, backend and database integration, reservation workflow development, testing, debugging, and version control using Git and GitHub.
+PostgreSQL provides structured relational data storage, while Supabase provides the backend services used by the application.
 
-The overall development process can be represented as:
+DEVELOPMENT WORKFLOW
+
+The project was developed as a collaborative full-stack application.
+
+The development process involved:
 
 Application Design
         ↓
@@ -160,29 +232,28 @@ Reservation Workflow
         ↓
 Testing and Debugging
         ↓
-Deployment / Version Control
-Design Principles
+Version Control
+
+Git and GitHub were used for source control and collaborative project development.
+
+DESIGN PRINCIPLES 
 User-Centered Workflow
 
 The application organizes the reservation process into a structured sequence from restaurant discovery to reservation confirmation.
 
-Full-Stack Integration
+FULL STACK-INTEGRATION
 
-Frontend components, backend services, and database operations work together to support the reservation workflow.
+Frontend components, backend services, and database operations work together to support the complete reservation workflow.
 
-Persistent Data Management
+PERSISTENT DATA MANAGEMENT 
 
 PostgreSQL provides structured relational data storage through the Supabase platform.
 
-Modular Development
+MODULAR PROJECT STRUCTURE 
 
-Frontend source code, public assets, database resources, and configuration are organized into separate project components.
+Frontend source code, public assets, database resources, and configuration are maintained in separate project directories.
 
-Limitations
-
-The current implementation can be extended in several areas. Reservation functionality depends on the configured backend and database environment, while authentication, authorization, reservation management, and administrative functionality can be further developed for a production-scale deployment.
-
-Future Enhancements
+FUTURE ENHANCEMENTS 
 
 Potential future improvements include:
 
@@ -198,42 +269,51 @@ Email or SMS confirmation
 Improved availability management
 Restaurant analytics and reporting
 Production deployment and monitoring
-
 Project Status
 
-Status: Functional Full-Stack Web Application
+Current Status: Functional Full-Stack Web Application
 
-The current implementation includes restaurant discovery, restaurant information, availability checking, reservation functionality, frontend interfaces, Supabase integration, PostgreSQL database integration, and a complete full-stack project structure.
+The current implementation includes:
 
-Team
+Restaurant discovery
+Restaurant information
+Table availability checking
+Reservation workflow
+Frontend web interface
+Supabase integration
+PostgreSQL database integration
+Full-stack project structure
+
+TEAM
 
 This project was developed collaboratively as a group project.
 
+Contributors
 Swetha Burra
 Nareen Reddy
 Pranav Akkina
 Shanvi Rishi
 
-My Contribution
+MY CONTRIBUTION 
 
 My primary contribution to the project was the frontend development and user interface design of the Restaurant Reservation System.
 
 I worked on:
 
-- Designing and developing the user-facing interface for the application
-- Implementing the restaurant browsing and reservation-related UI components
-- Structuring the layout and navigation to provide a clear and intuitive user experience
-- Styling and refining the application's visual design and responsive interface
-- Integrating frontend components with the application's functionality
-- Testing and refining the interface based on the overall application workflow
-
+Designing and developing the user-facing interface
+Implementing restaurant browsing and reservation-related UI components
+Structuring the layout and navigation to provide a clear user experience
+Styling and refining the application's visual design
+Developing and integrating frontend components with the application's functionality
+Testing and refining the interface as part of the overall application workflow
 Learning Outcomes
 
 This project provided practical experience in:
 
 Full-stack web application development
-React-based frontend development
-JavaScript application development
+Frontend development using React and JavaScript
+User interface design and implementation
+Backend service integration
 Supabase integration
 PostgreSQL database management
 Database-backed application workflows
@@ -242,20 +322,35 @@ Git and GitHub version control
 Collaborative software development
 Application testing and debugging
 
-Academic Context
+ACADEMIC CONTENT
 
 The Restaurant Reservation System was developed as an academic software engineering project focused on applying full-stack development concepts to a practical restaurant reservation problem.
 
-The project combines frontend development, backend integration, database management, application workflow design, and collaborative software development into a single working application.
+The project combines:
 
-Author
+Frontend Development
+        +
+Backend Integration
+        +
+Database Management
+        +
+User Interface Design
+        +
+Application Workflow Design
+        +
+Collaborative Development
+
+The project provided practical experience in developing and integrating the individual components required for a complete web-based application.
+
+AUTHOR
 
 Swetha Burra
 
 Computer Science Engineering
 
-GitHub: https://github.com/swethaburra2005-commits
+GitHub:
+https://github.com/swethaburra2005-commits
 
-License
+LICENSE
 
 This project was developed for academic and educational purposes.
